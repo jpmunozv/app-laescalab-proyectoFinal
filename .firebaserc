@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "curso-laescala-jpm": {
+      "hosting": {
+        "app-laescalab-proyectoFinal": [
+          "curso-laescala-jpm"
+        ]
+      }
+    }
+  }
+}

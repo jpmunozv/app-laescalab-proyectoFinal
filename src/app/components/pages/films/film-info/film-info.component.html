@@ -1,0 +1,17 @@
+<h2>Detalle del Film id {{this.id_film}}</h2>
+
+<div *ngIf="filmDetail; else emptyId">
+  <img src="{{image}}">
+    <ul>
+        <li>Name: {{ filmDetail.title | uppercase }}</li>
+        <li>Director: {{filmDetail.director}}</li>
+        <li>Productor: {{filmDetail.producer}}</li>
+        <li>Specie: {{filmDetail.created}}</li>
+    </ul>
+    <button routerLink="/films">Volver a Films</button>
+</div>
+
+<ng-template #emptyId>
+    <p>Dostn exist character with the</p>
+    <button routerLink="/films">Volver a Films</button>
+</ng-template>

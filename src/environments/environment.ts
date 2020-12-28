@@ -3,7 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  API_URL: 'https://swapi.dev/api/',  
+  firebase: {
+    apiKey: "AIzaSyAxLbn5FpnNvnAwVGueVAGi3VgJuvOVYec",
+    authDomain: "curso-laescala-jpm.firebaseapp.com",
+    databaseURL: "https://curso-laescala-jpm.firebaseio.com",
+    projectId: "curso-laescala-jpm",
+    storageBucket: "curso-laescala-jpm.appspot.com",
+    messagingSenderId: "5968789147",
+    appId: "1:5968789147:web:c774725fa89e825327d03e",
+    measurementId: '<your-measurement-id>'
+  }
+  
 };
 
 /*

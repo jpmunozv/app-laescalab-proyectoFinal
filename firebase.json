@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "app-laescalab-proyectoFinal",
+      "public": "dist/app-laescalab-proyectoFinal",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
