@@ -24,6 +24,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
+import { AuthenticatedGuard } from './components/shared/guards/authenticated.guard';
+import { RegisterComponent } from './components/shared/login/register/register.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { environment } from 'src/environments/environment';
     VehiclesComponent,
     FilmInfoComponent,
     TransfomaFechaPipe,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,7 @@ import { environment } from 'src/environments/environment';
     StarshipsModule,
     VehiclesModule */
   ],
-  providers: [],
+  providers: [AuthenticatedGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

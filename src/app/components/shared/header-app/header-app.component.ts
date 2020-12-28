@@ -26,6 +26,16 @@ export class HeaderAppComponent implements OnInit {
     {
       name: 'main',
       path: '/main'
+    },
+
+    {
+      name: 'Login',
+      path: '/login'
+    },
+
+    {
+      name: 'Register',
+      path: '/register'
     }
   ];
   constructor() { }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { LoginService } from 'src/app/services/login.service'
+import { LoginService } from 'src/app/services/auth-services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,20 +15,23 @@ export class LoginComponent implements OnInit {
     pass: new FormControl('')
   }) 
 
+
   constructor(
-    private loginService: LoginService
+    private loginService: LoginService,
+    private router: Router 
   ) { }
 
   ngOnInit() {
   }
 
   onLogin() {
-/*     console.log('submit form', this.loginForm.value);
+     console.log('submit form', this.loginForm.value);
     this.loginService.login(this.loginForm.value.email, this.loginForm.value.pass).then(resp => {
+      this.router.navigate(['home']);
       console.log('resp promise compo ts -->', resp);
     }).catch(error => {
       console.error('promise -->', error);
-    }); */
+    }); 
   }
 
 }

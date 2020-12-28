@@ -11,17 +11,25 @@ import { FilmInfoComponent } from './components/pages/films/film-info/film-info.
 import { HomeAppComponent } from './components/shared/home-app/home-app.component'
 import { HeaderAppComponent } from './components/shared/header-app/header-app.component';
 import { LoginComponent } from './components/shared/login/login.component';
+import { AuthenticatedGuard } from './components/shared/guards/authenticated.guard'
+import { RegisterComponent } from './components/shared/login/register/register.component';
 
 const routes: Routes = [
 
-  {
-    path: 'home',
-    component: HomeAppComponent,
+  { 
+    path: '', redirectTo: 'home', pathMatch: 'full' 
   },
 
   {
-    path: 'login',
-    component: LoginComponent,
+    path: 'home', component: HomeAppComponent,
+  },
+
+  {
+    path: 'login', component: LoginComponent
+  },
+
+  {
+    path: 'register', component: RegisterComponent
   },
 
   {
@@ -42,8 +50,7 @@ const routes: Routes = [
   }, */
 
   { 
-    path: 'films/detail/:id', 
-    component: FilmInfoComponent 
+    path: 'films/detail/:id', component: FilmInfoComponent 
   },
 /* 
   {
@@ -53,29 +60,26 @@ const routes: Routes = [
   }, */
   
   {
-    path: 'planets',
-    component: PlanetsComponent
+    path: 'planets', component: PlanetsComponent, canActivate: [AuthenticatedGuard]
   },
 
   {
-    path: 'species',
-    component: SpeciesComponent
+    path: 'species', component: SpeciesComponent, canActivate: [AuthenticatedGuard]
   },
 
   {
-    path: 'starships',
-    component: StarshipsComponent
+    path: 'starships', component: StarshipsComponent, canActivate: [AuthenticatedGuard]
   },
 
   {
-    path: 'vehicles',
-    component: VehiclesComponent
+    path: 'vehicles', component: VehiclesComponent, canActivate: [AuthenticatedGuard]
   },
 
   {
     path: 'main',
-    loadChildren: './components/pages/main/main.module#MainModule'
-  }
+    loadChildren: './components/pages/main/main.module#MainModule', canActivate: [AuthenticatedGuard]
+  },
+  
 
 ];
 
