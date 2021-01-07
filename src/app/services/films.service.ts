@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Film } from '../interfaces/film';
 import { FilmsAlls } from '../interfaces/filmsAll';
-//import { Film } from '../interfaces/film';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,15 +12,17 @@ import { FilmsAlls } from '../interfaces/filmsAll';
 export class FilmsService {
 
   constructor(private http: HttpClient) { }
-
+  
+  public api_url = environment.API_URL;
   public api_name: string = 'films';
 
+
   getFilmAll(): Observable<FilmsAlls> {
-    return this.http.get<FilmsAlls>('https://swapi.dev/api/films');
+    return this.http.get<FilmsAlls>(this.api_url + this.api_name);
   }
 
   getFilm(id_film: number): Observable<Film> {
-    return this.http.get<Film>('https://swapi.dev/api/films/'+ id_film);
+    return this.http.get<Film>(this.api_url + this.api_name + "/" + id_film);
   };
 
 

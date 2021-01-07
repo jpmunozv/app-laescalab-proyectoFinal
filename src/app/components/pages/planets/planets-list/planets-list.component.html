@@ -1,0 +1,12 @@
+<ul>
+    <li *ngFor="let planets of planetsList">
+       <img class="big" src="{{image}}">   
+       <ul>
+           <p>Nombre: {{planets.name | uppercase}}</p>
+           <P>Tipo de Terreno: {{planets.terrain | uppercase }} </P>
+           <button (click)="detallePlanets(planets.url)">Detalle</button> 
+           
+       </ul>
+   </li> 
+</ul>
+<router-outlet></router-outlet>

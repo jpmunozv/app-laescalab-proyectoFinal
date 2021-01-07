@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FilmsService }  from 'src/app/services/films.service'
 import { Film } from 'src/app/interfaces/film'
 import { Router } from '@angular/router';
+import { TransfomaFechaPipe } from 'src/app/components/shared/pipes/transfoma-fecha.pipe'
 
 @Component({
   selector: 'app-films',
-  templateUrl: './films.component.html',
-  styleUrls: ['./films.component.css']
+  templateUrl: './films-list.component.html',
+  styleUrls: ['./films-list.component.css']
 })
-export class FilmsComponent implements OnInit {
+export class FilmsListComponent implements OnInit {
   
 
   //public filmsList: Film[]
@@ -19,7 +20,7 @@ export class FilmsComponent implements OnInit {
     private filmsService: FilmsService,
     private router: Router 
     
-    ) { console.log('aqui llega?')}
+    ) { }
 
   ngOnInit() {
     this.filmsService.getFilmAll().subscribe(resp => {
@@ -29,11 +30,14 @@ export class FilmsComponent implements OnInit {
     }, error => {
       console.log('error All Films -->', error);
     })
-}
-  detalleFilm(id: number) {
-    this.router.navigate(['films', 'detail', id]);
-  
+  }  
+  detalleFilm(id_custom: string) {
+    id_custom = id_custom.substring(27, 28)
+    console.log('cuanto vale ID? --->',id_custom)
+    this.router.navigate(['films', 'detail', id_custom]);
   }
+  
+  
 
 
 

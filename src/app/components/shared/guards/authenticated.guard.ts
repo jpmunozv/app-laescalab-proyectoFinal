@@ -22,7 +22,7 @@ export class AuthenticatedGuard implements CanActivate {
       this.loginService.currentUSer().then(resp => {
         if (resp.uid != null) {
           this.logged = true;
-          this.router.navigate(['home']);
+          //this.router.navigate(['home']);
         } else {
           window.alert('protected route');
           this.logged = false;
@@ -33,7 +33,7 @@ export class AuthenticatedGuard implements CanActivate {
         console.log('error promise guard', error);
         this.logged = false;
         window.alert('protected route');
-        this.router.navigate(['login']);
+        //this.router.navigate(['login']);
         return this.logged;
       })
   

@@ -1,13 +1,12 @@
-<p>films works!</p>
 
 <ul>
      <li *ngFor="let film of filmsList">
         <img src="">   
         <ul>
-            <p>Episode Nº {{film.episode_id}}</p>
+            <p>Episode {{film.title}}</p>
             name: {{film.title | uppercase}}
             <P>Release: {{film.release_date | transfomaFecha}} </P>
-            <button (click)="detalleFilm(film.episode_id)">Go to Detail!</button> 
+            <button (click)="detalleFilm(film.url)">Go to Detail!</button> 
             <!-- <button routerLink="details">Go to Detail!</button> -->
         </ul>
     </li> 

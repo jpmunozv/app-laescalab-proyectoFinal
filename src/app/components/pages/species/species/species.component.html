@@ -1,0 +1,13 @@
+<ul>
+    <li *ngFor="let species of speciesList">
+       <img class="big" src="{{image}}">   
+       <ul>
+           <p>Nombre: {{species.name | uppercase}}</p>
+           <P>Clasificación: {{species.classification | uppercase }} </P>
+           <P>Idioma: {{species.language | uppercase }} </P>
+           <button (click)="detalleSpecies(species.url)">Detalle</button> 
+           
+       </ul>
+   </li> 
+</ul>
+<router-outlet></router-outlet>

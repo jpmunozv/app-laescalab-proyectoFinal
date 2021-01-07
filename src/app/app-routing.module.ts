@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { FilmsComponent } from './components/pages/films/films/films.component';
-import { PeopleComponent } from './components/pages/people/people/people.component';
-import { PlanetsComponent } from './components/pages/planets/planets.component';
-import { SpeciesComponent } from './components/pages/species/species.component';
+import { FilmsListComponent } from './components/pages/films/films-list/films-list.component';
+
+import { PlanetsComponent } from './components/pages/planets/planets-list/planets-list.component';
+import { SpeciesComponent } from './components/pages/species/species/species.component';
 import { StarshipsComponent } from './components/pages/starships/starships.component';
 import { VehiclesComponent } from './components/pages/vehicles/vehicles.component';
 import { FilmInfoComponent } from './components/pages/films/film-info/film-info.component';
@@ -13,74 +13,33 @@ import { HeaderAppComponent } from './components/shared/header-app/header-app.co
 import { LoginComponent } from './components/shared/login/login.component';
 import { AuthenticatedGuard } from './components/shared/guards/authenticated.guard'
 import { RegisterComponent } from './components/shared/login/register/register.component';
+import { RegisterDoneMessageComponent } from './components/shared/login/register-done-message/register-done-message.component';
+import { PeopleInfoComponent } from './components/pages/people/people-info/people-info.component';
+import { PlanetInfoComponent } from './components/pages/planets/planet-info/planet-info.component';
+import { SpecieInfoComponent } from './components/pages/species/specie-info/specie-info.component';
 
 const routes: Routes = [
 
-  { 
-    path: '', redirectTo: 'home', pathMatch: 'full' 
-  },
+  {path: '', component: HomeAppComponent},
+  {path: '', redirectTo: '', pathMatch: 'full'},
+
 
   {
-    path: 'home', component: HomeAppComponent,
+    //path: 'films',
+    //path: 'films/detail/:id',
+    path: 'filmlist',
+    //canActivate: [AuthenticatedGuard],
+    loadChildren: () =>
+      import('./components/pages/films/films.module').then(m=>m.FilmsModule)
   },
-
+ 
   {
-    path: 'login', component: LoginComponent
-  },
 
-  {
-    path: 'register', component: RegisterComponent
-  },
-
-  {
-    path: 'header',
-    component: HeaderAppComponent,
-    children: [
-      {
-        path: 'films',
-        loadChildren: './components/pages/films/films.module#FilmsModule'
-      }, 
-    ]
-  },
-
-/* 
-  {
-    path: 'films',
-    component: FilmsComponent,
-  }, */
-
-  { 
-    path: 'films/detail/:id', component: FilmInfoComponent 
-  },
-/* 
-  {
-    path: 'people',
-    loadChildren: './components/pages/people/people.module#PeopleModule'
-    // component: PeopleComponent
-  }, */
-  
-  {
-    path: 'planets', component: PlanetsComponent, canActivate: [AuthenticatedGuard]
-  },
-
-  {
-    path: 'species', component: SpeciesComponent, canActivate: [AuthenticatedGuard]
-  },
-
-  {
-    path: 'starships', component: StarshipsComponent, canActivate: [AuthenticatedGuard]
-  },
-
-  {
-    path: 'vehicles', component: VehiclesComponent, canActivate: [AuthenticatedGuard]
-  },
-
-  {
-    path: 'main',
-    loadChildren: './components/pages/main/main.module#MainModule', canActivate: [AuthenticatedGuard]
-  },
-  
-
+    path: 'peoplelist',
+    //canActivate: [AuthenticatedGuard],
+    loadChildren: () =>
+      import('./components/pages/people/people.module').then(m=>m.PeopleModule)
+  }
 ];
 
 @NgModule({

@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RegisterService } from 'src/app/services/auth-services/register.service';
 import { FirestoreService } from 'src/app/services/auth-services/firestore.service';
 import { User } from 'src/app/interfaces/user';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -23,7 +24,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private registerService: RegisterService,
-    private firestoreService: FirestoreService
+    private firestoreService: FirestoreService,
+    private router: Router 
   ) { }
 
   ngOnInit() {
@@ -42,6 +44,7 @@ export class RegisterComponent implements OnInit {
         console.log('id new user -->', resp);
       })
       console.log('registro DONEE???? -->', resp);
+      this.router.navigate(['register-done']);
     }).catch(error => {
       console.log(error);
     })

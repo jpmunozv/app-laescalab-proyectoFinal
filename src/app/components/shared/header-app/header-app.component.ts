@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/services/auth-services/login.service';
 
 @Component({
   selector: 'app-header-app',
@@ -36,11 +37,27 @@ export class HeaderAppComponent implements OnInit {
     {
       name: 'Register',
       path: '/register'
+    },
+
+    {
+      name: 'Logout',
+      path: '/login'
     }
+
+
   ];
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit() {
+  }
+
+
+  logout(){
+    this.loginService.logout().then(resp => {
+      console.log('logout ok -->', resp);
+    }).catch(error => {
+      console.error('error logout -->', error);
+    })
   }
 
 }

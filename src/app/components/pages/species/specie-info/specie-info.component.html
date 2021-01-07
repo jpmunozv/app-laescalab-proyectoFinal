@@ -1,0 +1,18 @@
+<div *ngIf="speciesDetail; else emptyId">
+    <h2>Detalle del Species " {{speciesDetail.name | uppercase}} "</h2>
+    <img class="big" src="{{image}}">
+      <ul>
+          <li>Name: {{ speciesDetail.name | uppercase }}</li>
+          <li>Homeworld: {{speciesDetail.homeworld | uppercase }}</li>
+          <li>Classification: {{speciesDetail.classification | uppercase}}</li>
+          <li>Language: {{speciesDetail.language | uppercase}} hours</li>
+          <li>Skin Colors: {{speciesDetail.skin_colors | uppercase}} days</li> 
+          <li>Designation: {{speciesDetail.designation | uppercase}} KMS</li>
+      </ul>
+      <button routerLink="/planets">Volver a Species</button>
+  </div>
+  
+  <ng-template #emptyId>
+      <p>La Especie NO existe</p>
+      <button routerLink="/planets">Volver a Species</button>
+  </ng-template>

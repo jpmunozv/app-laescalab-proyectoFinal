@@ -28,7 +28,7 @@ export class FilmInfoComponent implements OnInit {
 
     this.filmsService.getFilm(this.id_film).subscribe(resp => {
       this.filmDetail = resp;
-      console.log('Comovienen los datos de la PELI -->', this.filmDetail);
+      console.log('Como vienen los datos de la PELI -->', this.filmDetail);
     }, error => {
       console.log('erro info de las pelis', error);
     })

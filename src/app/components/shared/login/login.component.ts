@@ -27,8 +27,13 @@ export class LoginComponent implements OnInit {
   onLogin() {
      console.log('submit form', this.loginForm.value);
     this.loginService.login(this.loginForm.value.email, this.loginForm.value.pass).then(resp => {
-      this.router.navigate(['home']);
-      console.log('resp promise compo ts -->', resp);
+      console.log('entrega uid? --->', resp)
+      if (resp != null) {
+        console.log('entrega uid? --->', resp)
+        this.router.navigate(['home']);
+      } else {
+        this.router.navigate(['home']);
+      } 
     }).catch(error => {
       console.error('promise -->', error);
     }); 
