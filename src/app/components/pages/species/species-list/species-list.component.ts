@@ -4,10 +4,10 @@ import { Species } from 'src/app/interfaces/species'
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-species',
-  templateUrl: './species.component.html',
-  styleUrls: ['./species.component.css']
+  templateUrl: './species-list.component.html',
+  styleUrls: ['./species-list.component.css']
 })
-export class SpeciesComponent implements OnInit {
+export class SpeciesListComponent implements OnInit {
 
   public speciesList: Species[] = [];  
   public image: string = "" 

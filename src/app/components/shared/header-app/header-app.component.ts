@@ -21,7 +21,7 @@ export class HeaderAppComponent implements OnInit {
       path: '/planets'
     },
     {
-      name: 'species',
+      name: 'Species',
       path: '/species'
     },
     {

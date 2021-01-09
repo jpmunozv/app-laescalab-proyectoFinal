@@ -24,16 +24,16 @@ export class AuthenticatedGuard implements CanActivate {
           this.logged = true;
           //this.router.navigate(['home']);
         } else {
-          window.alert('protected route');
+          window.alert('Debe Iniciar Sesion como Usario registrado para acceder a esta página.');
           this.logged = false;
-          this.router.navigate(['login']);
+          this.router.navigate(['auth']);
         }
         return this.logged;
       }).catch(error => {
         console.log('error promise guard', error);
         this.logged = false;
-        window.alert('protected route');
-        //this.router.navigate(['login']);
+        window.alert('Debe Iniciar Sesion como Usario registrado para acceder a esta página.');
+        this.router.navigate(['auth']);
         return this.logged;
       })
   

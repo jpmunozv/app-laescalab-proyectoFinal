@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { LoginService } from 'src/app/services/auth-services/login.service';
 import { Router } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms'
 
 @Component({
   selector: 'app-login',
@@ -30,7 +31,7 @@ export class LoginComponent implements OnInit {
       console.log('entrega uid? --->', resp)
       if (resp != null) {
         console.log('entrega uid? --->', resp)
-        this.router.navigate(['home']);
+        this.router.navigate(['']);
       } else {
         this.router.navigate(['home']);
       } 

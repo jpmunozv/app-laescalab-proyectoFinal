@@ -1,0 +1,38 @@
+/* @import "~src/_colores.scss";
+.container {
+    padding: 5%;
+}
+
+.lead {
+    background: $color-white;
+    padding: 4%;
+}
+
+.background-color-404 {
+    background-color: $color-red;
+}
+
+.background-color-hr {
+    background-color: $color-red;
+}
+
+.color-text-404 {
+    color: $color-red;
+    font-size: 150px;
+    font-weight: bold;
+}
+
+.color-text-bajada {
+    color: $color-red;
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+}
+
+.tamano-icono {
+    color: $color-red;
+    font-size: 15em;
+} */

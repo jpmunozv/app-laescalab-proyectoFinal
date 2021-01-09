@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './planets-list.component.html',
   styleUrls: ['./planets-list.component.css']
 })
-export class PlanetsComponent implements OnInit {
+export class PlanetsListComponent implements OnInit {
 
   public planetsList: Planets[] = [];  
   public image: string = "https://i.pinimg.com/originals/56/37/69/563769f0491a3898145f0113ead75443.jpg" 

@@ -4,15 +4,15 @@ import { CommonModule } from '@angular/common';
 import { PeopleRoutingModule } from './people-routing.module';
 import { PeopleListComponent } from './people-list/people-list.component';
 import { PeopleInfoComponent } from './people-info/people-info.component';
-import { PeopleComponent } from './people.component';
-import { TransfomaFechaPipe } from 'src/app/components/shared/pipes/transfoma-fecha.pipe';
+
 
 @NgModule({
-  declarations: [PeopleComponent, PeopleListComponent, PeopleInfoComponent],
+  declarations: [ PeopleListComponent, PeopleInfoComponent],
   imports: [
     CommonModule,
-    PeopleRoutingModule
+    PeopleRoutingModule,
+  
   ],
-  exports: [ PeopleComponent, PeopleListComponent, PeopleInfoComponent ]
+  exports: [  ]
 })
 export class PeopleModule { }
