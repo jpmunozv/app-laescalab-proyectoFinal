@@ -1,14 +1,16 @@
 
-<ul>
-     <li *ngFor="let film of filmsList">
-        <img src="">   
-        <ul>
-            <p>Episode {{film.title}}</p>
-            name: {{film.title | uppercase}}
-            <P>Release: {{film.release_date | transfomaFecha}} </P>
-            <button (click)="detalleFilm(film.url)">Go to Detail!</button> 
-            <!-- <button routerLink="details">Go to Detail!</button> -->
-        </ul>
-    </li> 
-</ul>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div *ngFor="let film of filmsList"> 
+        <div class="col">
+            <div class="card">
+                <img src="{{image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">EPISODE: {{film.title}}</h5>
+                <p class="card-text">Estreno: {{film.release_date | transfomaFecha}} </p>
+                <button type="button" class="btn btn-warning" (click)="detalleFilm(film.url)">Mas Info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
 <router-outlet></router-outlet>

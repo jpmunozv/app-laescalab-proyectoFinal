@@ -1,18 +1,12 @@
-
-
-<div *ngIf="peopleDetail; else emptyId">
-  <h2>Detalle del Personaje {{peopleDetail.name | uppercase}}</h2>
-  <img src="{{image}}">
-    <ul>
-        <li>Name: {{ peopleDetail.name | uppercase }}</li>
-        <li>Genero: {{peopleDetail.gender | uppercase }}</li>
-        <li>Color del Pelo: {{peopleDetail.hair_color | uppercase}}</li>
-        <li>Color de Ojos: {{peopleDetail.eye_color}}</li>
-    </ul>
-    <button routerLink="/peoplelist">Volver a People</button>
+<div class="card" style="width: 38rem;">
+    <img src="{{image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{peopleDetail.name | uppercase}}</h5>
+        <p class="card-text">Name: {{ peopleDetail.name | uppercase }}</p>
+        <p class="card-text">Gender: {{peopleDetail.gender | uppercase }}</p>
+        <p class="card-text">Hair Color: {{peopleDetail.hair_color | uppercase}}</p> 
+        <p class="card-text">Eye Color: {{peopleDetail.eye_color | uppercase}}</p>
+        <p class="card-text">Skin Color: {{peopleDetail.skin_color | uppercase}}</p> 
+        <a class="btn btn-primary" routerLink="/peoplelist">Volver a People</a>
+    </div>
 </div>
-
-<ng-template #emptyId>
-    <p>El Personaje NO existe</p>
-    <button routerLink="/peoplelist">Volver a People</button>
-</ng-template>

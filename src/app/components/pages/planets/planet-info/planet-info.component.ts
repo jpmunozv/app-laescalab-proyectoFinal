@@ -8,13 +8,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-planet-info',
   templateUrl: './planet-info.component.html',
-  styleUrls: ['./planet-info.component.css']
+  styleUrls: ['./planet-info.component.scss']
 })
 export class PlanetInfoComponent implements OnInit {
 
   public planetDetail : Planets
   public id_planet : any
-  public image: string = "https://i.pinimg.com/originals/56/37/69/563769f0491a3898145f0113ead75443.jpg"
+  public image : string = "/assets/img/planets.jpg"
   constructor(
     private activeRoute: ActivatedRoute,
     private planetsService: PlanetsService

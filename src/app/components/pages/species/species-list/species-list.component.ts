@@ -5,12 +5,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-species',
   templateUrl: './species-list.component.html',
-  styleUrls: ['./species-list.component.css']
+  styleUrls: ['./species-list.component.scss']
 })
 export class SpeciesListComponent implements OnInit {
 
   public speciesList: Species[] = [];  
-  public image: string = "" 
+  public image : string = "/assets/img/species.jpg"
   private id: string;
   constructor(
     private speciesService: SpeciesService,

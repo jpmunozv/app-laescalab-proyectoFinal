@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
 
@@ -33,7 +33,8 @@ export class LoginComponent implements OnInit {
         console.log('entrega uid? --->', resp)
         this.router.navigate(['']);
       } else {
-        this.router.navigate(['home']);
+        console.log('falló login?--->',resp )
+        this.router.navigate(['']);
       } 
     }).catch(error => {
       console.error('promise -->', error);

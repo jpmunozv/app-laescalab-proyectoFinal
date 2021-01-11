@@ -7,14 +7,14 @@ import { TransfomaFechaPipe } from 'src/app/components/shared/pipes/transfoma-fe
 @Component({
   selector: 'app-films',
   templateUrl: './films-list.component.html',
-  styleUrls: ['./films-list.component.css']
+  styleUrls: ['./films-list.component.scss']
 })
 export class FilmsListComponent implements OnInit {
   
 
   //public filmsList: Film[]
   public filmsList: Film[] = [];  
-  public image: string = "https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/test/5cbeea135cafe88451149213/sw1.jpg"
+  public image : string = "/assets/img/home.jpg";
 
   constructor(
     private filmsService: FilmsService,

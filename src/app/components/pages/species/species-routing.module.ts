@@ -5,7 +5,7 @@ import { SpecieInfoComponent } from './specie-info/specie-info.component';
 import { AuthenticatedGuard } from 'src/app/components/shared/guards/authenticated.guard'
 
 const routes: Routes = [
-  { path: "", component: SpeciesListComponent, canActivate: [AuthenticatedGuard]},
+  { path: "specieslist", component: SpeciesListComponent, canActivate: [AuthenticatedGuard]},
   { path: "species/detail/:id", component: SpecieInfoComponent, canActivate: [AuthenticatedGuard]}
 ];
 

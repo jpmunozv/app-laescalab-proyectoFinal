@@ -6,13 +6,13 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-people',
   templateUrl: './people-list.component.html',
-  styleUrls: ['./people-list.component.css']
+  styleUrls: ['./people-list.component.scss']
 })
 export class PeopleListComponent implements OnInit {
 
 
   public peopleList: People[] = [];  
-  public image: string = "https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/test/5cbeea135cafe88451149213/sw1.jpg" 
+  public image : string = "/assets/img/home.jpg"; 
   public id: string;
   constructor(
     private peopleService: PeopleService,

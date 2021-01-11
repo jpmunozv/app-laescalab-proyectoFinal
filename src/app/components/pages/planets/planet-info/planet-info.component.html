@@ -1,18 +1,13 @@
-<div *ngIf="planetDetail; else emptyId">
-    <h2>Detalle del Planeta " {{planetDetail.name | uppercase}} "</h2>
-    <img class="big" src="{{image}}">
-      <ul>
-          <li>Nombre: {{ planetDetail.name | uppercase }}</li>
-          <li>Tipo de Terreno: {{planetDetail.terrain | uppercase }}</li>
-          <li>Clima: {{planetDetail.climate | uppercase}}</li>
-          <li>Rotación: {{planetDetail.rotation_period}} hours</li>
-          <li>Orbitación: {{planetDetail.orbital_period}} days</li> 
-          <li>Diametro: {{planetDetail.diameter}} KMS</li>
-      </ul>
-      <button routerLink="/planetslist">Volver a Planets</button>
-  </div>
-  
-  <ng-template #emptyId>
-      <p>El Planeta NO existe</p>
-      <button routerLink="/planetslist">Volver a Planets</button>
-  </ng-template>
+
+<div class="card" style="width: 38rem;">
+    <img src="{{image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{ planetDetail.name | uppercase }}</h5>
+        <p class="card-text">Terrain: {{planetDetail.terrain | uppercase }}</p>
+        <p class="card-text">Climate: {{planetDetail.climate | uppercase}}</p>
+        <p class="card-text">Rotation: {{planetDetail.rotation_period}} hours</p> 
+        <p class="card-text">Orbital Period: {{planetDetail.orbital_period}} days</p> 
+        <p class="card-text">Diameter: {{planetDetail.diameter}} KMS</p>
+        <a class="btn btn-primary" routerLink="/planetslist">Volver a Planets</a>
+    </div>
+</div>

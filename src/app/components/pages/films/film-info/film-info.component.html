@@ -1,18 +1,12 @@
 
-
-<div *ngIf="filmDetail; else emptyId">
-  <h2>Detalle del Film " {{filmDetail.title}} "</h2>
-  <img src="{{image}}">
-    <ul>
-        <li>Name: {{ filmDetail.title | uppercase }}</li>
-        <li>Director: {{filmDetail.director}}</li>
-        <li>Productor: {{filmDetail.producer}}</li>
-        <li>Specie: {{filmDetail.created}}</li>
-    </ul>
-    <button routerLink="/filmslist">Volver a Films</button>
-</div>
-
-<ng-template #emptyId>
-    <p>La Pelicula NO existe.</p>
-    <button routerLink="/filmslist">Volver a Films</button>
-</ng-template>
+    <div class="card" style="width: 38rem;">
+        <img src="{{image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{filmDetail.title}}</h5>
+            <p class="card-text">Director: {{filmDetail.director}}</p>
+            <p class="card-text">Productor: {{filmDetail.producer}}</p>
+            <p class="card-text">History: </p> 
+            <p class="card-text">{{filmDetail.opening_crawl}}</p> 
+            <a class="btn btn-primary" routerLink="/filmslist">Volver a Films</a>
+        </div>
+    </div>

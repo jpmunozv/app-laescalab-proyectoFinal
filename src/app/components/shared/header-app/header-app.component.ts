@@ -4,7 +4,7 @@ import { LoginService } from 'src/app/services/auth-services/login.service';
 @Component({
   selector: 'app-header-app',
   templateUrl: './header-app.component.html',
-  styleUrls: ['./header-app.component.css']
+  styleUrls: ['./header-app.component.scss']
 })
 export class HeaderAppComponent implements OnInit {
   rutas = [

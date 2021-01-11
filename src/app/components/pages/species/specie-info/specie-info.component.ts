@@ -5,13 +5,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-specie-info',
   templateUrl: './specie-info.component.html',
-  styleUrls: ['./specie-info.component.css']
+  styleUrls: ['./specie-info.component.scss']
 })
 export class SpecieInfoComponent implements OnInit {
 
   public speciesDetail : Species
   public id_specie : any
-  public image: string = ""
+  public image : string = "/assets/img/species.jpg"
   constructor(
     private activeRoute: ActivatedRoute,
     private speciesService: SpeciesService

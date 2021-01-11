@@ -7,7 +7,6 @@ import { AuthenticatedGuard } from '../../shared/guards/authenticated.guard';
 
 const routes: Routes = [
 
-    //{ path: '', component: PeopleComponent },
     { path: 'peoplelist', component: PeopleListComponent, canActivate: [AuthenticatedGuard] } ,
     { path: 'people/detail/:id', component: PeopleInfoComponent, canActivate: [AuthenticatedGuard] }
   

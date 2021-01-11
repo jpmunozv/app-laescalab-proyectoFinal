@@ -1,13 +1,33 @@
-<ul>
-    <li *ngFor="let species of speciesList">
-       <img class="big" src="{{image}}">   
-       <ul>
-           <p>Nombre: {{species.name | uppercase}}</p>
-           <P>Clasificación: {{species.classification | uppercase }} </P>
-           <P>Idioma: {{species.language | uppercase }} </P>
-           <button (click)="detalleSpecies(species.url)">Detalle</button> 
-           
-       </ul>
-   </li> 
-</ul>
+
+<!--     <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div *ngFor="let specie of speciesList"> 
+            <div class="col">
+                <div class="card">
+                    <img src="{{image}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Specie: {{specie.name | uppercase}}</h5>
+                    <button type="button" class="btn btn-warning" (click)="detalleSpecies(specie.url)">Mas Info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ -->
+<div class="card-group">
+    <div *ngFor="let specie of speciesList"> 
+        <div class="card">
+            <img src="{{image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{specie.name | uppercase}}</h5>
+            <p class="card-text"><small class="text-muted">{{specie.classification | uppercase}}</small></p>
+            <button type="button" class="btn btn-warning" (click)="detalleSpecies(specie.url)">Mas Info</button>
+            </div>
+        </div>
+    </div>
+</div>
 <router-outlet></router-outlet>
+
+
+
+
+

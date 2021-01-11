@@ -8,8 +8,8 @@ import { AuthenticatedGuard } from 'src/app/components/shared/guards/authenticat
 
 const routes: Routes = [
 
-  { path: 'filmslist', component: FilmsListComponent,  canActivate: [AuthenticatedGuard] },
-  { path: 'films/detail/:id', component: FilmInfoComponent,   canActivate: [AuthenticatedGuard] },
+  { path: 'filmslist', component: FilmsListComponent, canActivate: [AuthenticatedGuard] },
+  { path: 'films/detail/:id', component: FilmInfoComponent, canActivate: [AuthenticatedGuard] },
   
 ];
 

@@ -20,7 +20,7 @@ export class TransfomaFechaPipe implements PipeTransform {
     var varMes = parseInt(value.slice(5,7))-1
     var varMesFinal = meses[varMes]
   
-    var fechaFormateada  = varDia + " de " + varMesFinal + " del " + varAnio
+    var fechaFormateada  = varDia + " de " + varMesFinal + ", " + varAnio
     return fechaFormateada;
 
   }

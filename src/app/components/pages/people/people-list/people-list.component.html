@@ -1,12 +1,14 @@
-<ul>
-    <li *ngFor="let people of peopleList">
-       <img src="">   
-       <ul>
-           <p>Nombre: {{people.name | uppercase}}</p>
-           <P>Genero: {{people.gender | uppercase }} </P>
-           <button (click)="detallePeople(people.url)">Go to Detail!</button> 
-           <!-- <button routerLink="details">Go to Detail!</button> -->
-       </ul>
-   </li> 
-</ul>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div *ngFor="let people of peopleList"> 
+        <div class="col">
+            <div class="card">
+                <img src="{{image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Nombre: {{people.name | uppercase}}</h5>
+                <button type="button" class="btn btn-warning" (click)="detallePeople(people.url)">Mas Info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
 <router-outlet></router-outlet>

@@ -7,12 +7,12 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 @Component({
   selector: 'app-film-info',
   templateUrl: './film-info.component.html',
-  styleUrls: ['./film-info.component.css']
+  styleUrls: ['./film-info.component.scss']
 })
 export class FilmInfoComponent implements OnInit {
   public filmDetail : Film
   public id_film : any
-  public image: string = "https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/test/5cbeea135cafe88451149213/sw1.jpg"
+  public image : string = "/assets/img/home.jpg";
   constructor(
     private activeRoute: ActivatedRoute,
     private filmsService: FilmsService

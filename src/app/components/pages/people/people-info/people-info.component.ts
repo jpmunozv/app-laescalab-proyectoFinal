@@ -7,12 +7,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-people-info',
   templateUrl: './people-info.component.html',
-  styleUrls: ['./people-info.component.css']
+  styleUrls: ['./people-info.component.scss']
 })
 export class PeopleInfoComponent implements OnInit {
   public peopleDetail : People
   public id_people : any
-  public image: string = "https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/test/5cbeea135cafe88451149213/sw1.jpg"
+  public image : string = "/assets/img/home.jpg";
   constructor(
     private activeRoute: ActivatedRoute,
     private peopleService: PeopleService
