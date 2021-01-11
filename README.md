@@ -1,3 +1,5 @@
+# General
+
 Desafio Final para Curso Angular en Escalab Academy (5gen)
 
 Mentor: Gustavo Gutierrez
@@ -7,8 +9,8 @@ juan.munoz@avattar.com
 
 # Levantar proyecto 'AppLaescalabProyectoFinal'
 
- >> npm i
- >> ng serve -o
+ - npm i
+ - ng serve -o
 
 # Para logearse en la web 'AppLaescalabProyectoFinal'
 
